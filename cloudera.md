@@ -32,7 +32,7 @@ nomEtPrenom= FOREACH salarie GENERATE nom, ToDate (birthday, 'dd/MM/yyyy') as da
 salarieciv2 = FILTER salarie BY civilite == 2 ;
 STORE salarieciv2 INTO '/user/cloudera/tp_talend/pig1.csv' USING PigStorage (';');
 DUMP salarie;
-
+```
 
 ```pig
 salarie = LOAD '/user/cloudera/tp_talend/salarie_no_doublons' 
